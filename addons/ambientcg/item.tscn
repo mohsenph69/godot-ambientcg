@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://addons/ambientcg/item.gd" type="Script" id=1]
+[ext_resource path="res://addons/ambientcg/asset/freeroad.regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 45
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "loading"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.7, 1.0, 1.0 ]
+}
+
+[node name="item" type="HBoxContainer"]
+margin_top = 34.0
+margin_right = 1024.0
+margin_bottom = 546.0
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_bottom = 512.0
+
+[node name="V" type="VBoxContainer" parent="."]
+margin_left = 4.0
+margin_right = 205.0
+margin_bottom = 512.0
+
+[node name="Label" type="Label" parent="V"]
+margin_right = 201.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 1 )
+text = "Loading ..."
+percent_visible = 0.0
+
+[node name="anim" type="AnimationPlayer" parent="V/Label"]
+anims/RESET = SubResource( 3 )
+anims/loading = SubResource( 2 )
+
+[node name="get_info" type="HTTPRequest" parent="."]
+timeout = 8
+
+[node name="get_img" type="HTTPRequest" parent="."]
+
+[connection signal="request_completed" from="get_info" to="." method="_on_get_info_request_completed"]
+[connection signal="request_completed" from="get_img" to="." method="_on_get_img_request_completed"]

@@ -1,0 +1,223 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://addons/ambientcg/gdasset.gd" type="Script" id=1]
+[ext_resource path="res://addons/ambientcg/ItemList.gd" type="Script" id=2]
+[ext_resource path="res://addons/ambientcg/setting.gd" type="Script" id=3]
+[ext_resource path="res://addons/ambientcg/asset/Icon-round_small.png" type="Texture" id=4]
+[ext_resource path="res://addons/ambientcg/asset/freeroad.regular.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.388235, 0.388235, 0.388235, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 27
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 48
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 22
+font_data = ExtResource( 6 )
+
+[node name="gdasset" type="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="V" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="H" type="HBoxContainer" parent="V"]
+margin_right = 1024.0
+margin_bottom = 30.0
+
+[node name="back" type="Button" parent="V/H"]
+margin_right = 60.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Back"
+
+[node name="search" type="Button" parent="V/H"]
+margin_left = 64.0
+margin_right = 124.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "search"
+
+[node name="query" type="LineEdit" parent="V/H"]
+margin_left = 128.0
+margin_right = 388.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 260, 0 )
+
+[node name="setting" type="Button" parent="V/H"]
+margin_left = 392.0
+margin_right = 452.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Setting"
+
+[node name="scroll" type="ScrollContainer" parent="V"]
+margin_top = 34.0
+margin_right = 1024.0
+margin_bottom = 554.0
+rect_min_size = Vector2( 0, 520 )
+
+[node name="ItemList" type="ItemList" parent="V/scroll"]
+margin_right = 1024.0
+margin_bottom = 6391.0
+rect_min_size = Vector2( 1024, 0 )
+items = [ "WoodFloor", ExtResource( 4 ), false, "Wood", ExtResource( 4 ), false, "OutdoorHDRI", ExtResource( 4 ), false, "Bricks", ExtResource( 4 ), false, "PaintedPlaster", ExtResource( 4 ), false, "PavingStones", ExtResource( 4 ), false, "Grass", ExtResource( 4 ), false, "Ground", ExtResource( 4 ), false, "Fabric", ExtResource( 4 ), false, "Concrete", ExtResource( 4 ), false, "Marble", ExtResource( 4 ), false, "Planks", ExtResource( 4 ), false, "Metal", ExtResource( 4 ), false, "Tiles", ExtResource( 4 ), false, "Leather", ExtResource( 4 ), false, "Gravel", ExtResource( 4 ), false, "IndoorHDRI", ExtResource( 4 ), false, "SkyOnlyHDRI", ExtResource( 4 ), false, "Terrain", ExtResource( 4 ), false, "Rock", ExtResource( 4 ), false, "Plaster", ExtResource( 4 ), false, "Plastic", ExtResource( 4 ), false, "Road", ExtResource( 4 ), false, "Facade", ExtResource( 4 ), false, "Moss", ExtResource( 4 ), false, "Porcelain", ExtResource( 4 ), false, "MetalPlates", ExtResource( 4 ), false, "GlazedTerracotta", ExtResource( 4 ), false, "WoodFloorSubstance", ExtResource( 4 ), false, "TactilePaving", ExtResource( 4 ), false, "Asphalt", ExtResource( 4 ), false, "RoofingTiles", ExtResource( 4 ), false, "Foliage", ExtResource( 4 ), false, "Terrazzo", ExtResource( 4 ), false, "Rocks", ExtResource( 4 ), false, "OfficeCeiling", ExtResource( 4 ), false, "LeafSet", ExtResource( 4 ), false, "Carpet", ExtResource( 4 ), false, "AcousticFoam", ExtResource( 4 ), false, "WoodSiding", ExtResource( 4 ), false, "SheetMetal", ExtResource( 4 ), false, "Fingerprints", ExtResource( 4 ), false, "PaintedBricks", ExtResource( 4 ), false, "Leaking", ExtResource( 4 ), false, "PaintedWood", ExtResource( 4 ), false, "Backdrop", ExtResource( 4 ), false, "ScrewSet", ExtResource( 4 ), false, "Pathway", ExtResource( 4 ), false, "Bark", ExtResource( 4 ), false, "Paint", ExtResource( 4 ), false, "Paper", ExtResource( 4 ), false, "PavingEdge", ExtResource( 4 ), false, "WoodChips", ExtResource( 4 ), false, "PaintedMetal", ExtResource( 4 ), false, "Chip", ExtResource( 4 ), false, "ChristmasTreeOrnament", ExtResource( 4 ), false, "Clay", ExtResource( 4 ), false, "GrassSubstance", ExtResource( 4 ), false, "SolarPanel", ExtResource( 4 ), false, "TreeEnd", ExtResource( 4 ), false, "ShellSet", ExtResource( 4 ), false, "Snow", ExtResource( 4 ), false, "GroundSubstance", ExtResource( 4 ), false, "FabricSubstance", ExtResource( 4 ), false, "Lava", ExtResource( 4 ), false, "AsphaltDamageSet", ExtResource( 4 ), false, "Cardboard", ExtResource( 4 ), false, "CorrugatedSteel", ExtResource( 4 ), false, "ManholeCover", ExtResource( 4 ), false, "Rope", ExtResource( 4 ), false, "Sponge", ExtResource( 4 ), false, "MetalWalkway", ExtResource( 4 ), false, "Wicker", ExtResource( 4 ), false, "Fence", ExtResource( 4 ), false, "Pipe", ExtResource( 4 ), false, "MarbleSubstance", ExtResource( 4 ), false, "SurfaceImperfections", ExtResource( 4 ), false, "Ice", ExtResource( 4 ), false, "Chainmail", ExtResource( 4 ), false, "AsphaltDamage", ExtResource( 4 ), false, "DiamondPlate", ExtResource( 4 ), false, "StickSet", ExtResource( 4 ), false, "WoodSubstance", ExtResource( 4 ), false, "BricksSubstance", ExtResource( 4 ), false, "Rust", ExtResource( 4 ), false, "PlanksSubstance", ExtResource( 4 ), false, "ScatteredLeaves", ExtResource( 4 ), false, "Scratches", ExtResource( 4 ), false, "Cork", ExtResource( 4 ), false, "TilesSubstance", ExtResource( 4 ), false, "GravelSubstance", ExtResource( 4 ), false, "Chipboard", ExtResource( 4 ), false, "MetalSubstance", ExtResource( 4 ), false, "TerrazzoSubstance", ExtResource( 4 ), false, "RockSubstance", ExtResource( 4 ), false, "Foam", ExtResource( 4 ), false, "FacadeSubstance", ExtResource( 4 ), false, "ScrewSubstance", ExtResource( 4 ), false, "Leaf", ExtResource( 4 ), false, "RoadLines", ExtResource( 4 ), false, "Grate", ExtResource( 4 ), false, "MetalPlatesSubstance", ExtResource( 4 ), false, "WoodSidingSubstance", ExtResource( 4 ), false, "MossSubstance", ExtResource( 4 ), false, "WrinklesBrush", ExtResource( 4 ), false, "Tape", ExtResource( 4 ), false, "Footsteps", ExtResource( 4 ), false, "GlazedTerracottaSubstance", ExtResource( 4 ), false, "Sign", ExtResource( 4 ), false, "PaintedMetalSubstance", ExtResource( 4 ), false, "Candy", ExtResource( 4 ), false, "LeatherSubstance", ExtResource( 4 ), false, "LeakingSubstance", ExtResource( 4 ), false, "RoadSubstance", ExtResource( 4 ), false, "PavingStonesSubstance", ExtResource( 4 ), false, "PlasterSubstance", ExtResource( 4 ), false, "RoofingTilesSubstance", ExtResource( 4 ), false, "RockBrush", ExtResource( 4 ), false, "ColdCuts", ExtResource( 4 ), false, "PaintedPlasterSubstance", ExtResource( 4 ), false, "PlasticSubstance", ExtResource( 4 ), false, "Smear", ExtResource( 4 ), false, "FlowerSet", ExtResource( 4 ), false, "TactilePavingSubstance", ExtResource( 4 ), false, "AsphaltSubstance", ExtResource( 4 ), false, "PaymentCard", ExtResource( 4 ), false, "PorcelainSubstance", ExtResource( 4 ), false, "CardboardSubstance", ExtResource( 4 ), false, "ConcreteSubstance", ExtResource( 4 ), false, "PaintedBricksSubstance", ExtResource( 4 ), false, "CarpetSubstance", ExtResource( 4 ), false, "Painting", ExtResource( 4 ), false, "PineNeedles", ExtResource( 4 ), false, "SheetMetalSubstance", ExtResource( 4 ), false, "ChristmasTreeOrnamentSubstance", ExtResource( 4 ), false, "FingerprintsSubstance", ExtResource( 4 ), false, "AcousticFoamSubstance", ExtResource( 4 ), false, "ClaySubstance", ExtResource( 4 ), false, "OfficeCeilingSubstance", ExtResource( 4 ), false, "SolarPanelSubstance", ExtResource( 4 ), false, "LavaSubstance", ExtResource( 4 ), false, "SpongeSubstance", ExtResource( 4 ), false, "WickerSubstance", ExtResource( 4 ), false, "SignSubstance", ExtResource( 4 ), false, "PaintSubstance", ExtResource( 4 ), false, "RopeSubstance", ExtResource( 4 ), false, "Sticker", ExtResource( 4 ), false, "ScatteredLeavesSubstance", ExtResource( 4 ), false, "MetalWalkwaySubstance", ExtResource( 4 ), false, "PipeSubstance", ExtResource( 4 ), false, "PaintedWoodSubstance", ExtResource( 4 ), false, "RustSubstance", ExtResource( 4 ), false, "FoamSubstance", ExtResource( 4 ), false, "FenceSubstance", ExtResource( 4 ), false, "CorrugatedSteelSubstance", ExtResource( 4 ), false, "SurfaceImperfectionsSubstance", ExtResource( 4 ), false, "DiamondPlateSubstance", ExtResource( 4 ), false, "IceSubstance", ExtResource( 4 ), false, "SnowSubstance", ExtResource( 4 ), false, "ChainmailSubstance", ExtResource( 4 ), false, "ChipboardSubstance", ExtResource( 4 ), false, "ScratchesSubstance", ExtResource( 4 ), false, "RoadLinesSubstance", ExtResource( 4 ), false, "TapeSubstance", ExtResource( 4 ), false, "PaymentCardSubstance", ExtResource( 4 ), false, "CandySubstance", ExtResource( 4 ), false ]
+auto_height = true
+max_columns = 13
+same_column_width = true
+icon_mode = 0
+script = ExtResource( 2 )
+
+[node name="get_asset_root" type="Node" parent="V/scroll/ItemList"]
+
+[node name="get_thumbnail" type="Node" parent="V/scroll/ItemList"]
+
+[node name="Timer" type="Timer" parent="V/scroll/ItemList"]
+wait_time = 0.3
+autostart = true
+
+[node name="setting" type="ScrollContainer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 1024, 1024 )
+custom_styles/bg = SubResource( 3 )
+script = ExtResource( 3 )
+
+[node name="http" type="HTTPRequest" parent="setting"]
+
+[node name="V" type="VBoxContainer" parent="setting"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 468.0
+margin_bottom = 493.0
+
+[node name="H" type="HBoxContainer" parent="setting/V"]
+margin_right = 463.0
+margin_bottom = 60.0
+
+[node name="back" type="Button" parent="setting/V/H"]
+margin_right = 80.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 80, 60 )
+custom_fonts/font = SubResource( 1 )
+text = "Back"
+
+[node name="update_csv" type="Button" parent="setting/V/H"]
+margin_left = 84.0
+margin_right = 327.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 80, 60 )
+custom_fonts/font = SubResource( 1 )
+text = "Update textures list"
+
+[node name="mes" type="Label" parent="setting/V/H"]
+margin_left = 331.0
+margin_top = 8.0
+margin_right = 331.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 4 )
+
+[node name="MarginContainer" type="MarginContainer" parent="setting/V"]
+margin_top = 64.0
+margin_right = 463.0
+margin_bottom = 114.0
+rect_min_size = Vector2( 0, 50 )
+
+[node name="Label" type="Label" parent="setting/V"]
+margin_top = 118.0
+margin_right = 463.0
+margin_bottom = 139.0
+custom_fonts/font = SubResource( 2 )
+text = "Texture Directory Path"
+
+[node name="tex_path" type="LineEdit" parent="setting/V"]
+margin_top = 143.0
+margin_right = 463.0
+margin_bottom = 167.0
+text = "res://textures"
+expand_to_text_length = true
+
+[node name="MarginContainer4" type="MarginContainer" parent="setting/V"]
+margin_top = 171.0
+margin_right = 463.0
+margin_bottom = 221.0
+rect_min_size = Vector2( 0, 50 )
+
+[node name="Label4" type="Label" parent="setting/V"]
+margin_top = 225.0
+margin_right = 463.0
+margin_bottom = 246.0
+custom_fonts/font = SubResource( 2 )
+text = "Material Path"
+
+[node name="mat_path" type="LineEdit" parent="setting/V"]
+margin_top = 250.0
+margin_right = 463.0
+margin_bottom = 274.0
+text = "res://mat"
+expand_to_text_length = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="setting/V"]
+margin_top = 278.0
+margin_right = 463.0
+margin_bottom = 328.0
+rect_min_size = Vector2( 0, 50 )
+
+[node name="Label2" type="Label" parent="setting/V"]
+margin_top = 332.0
+margin_right = 463.0
+margin_bottom = 353.0
+custom_fonts/font = SubResource( 2 )
+text = "Unzip Program"
+
+[node name="unzip_program" type="LineEdit" parent="setting/V"]
+margin_top = 357.0
+margin_right = 463.0
+margin_bottom = 381.0
+text = "unzip"
+expand_to_text_length = true
+
+[node name="MarginContainer3" type="MarginContainer" parent="setting/V"]
+margin_top = 385.0
+margin_right = 463.0
+margin_bottom = 435.0
+rect_min_size = Vector2( 0, 50 )
+
+[node name="Label3" type="Label" parent="setting/V"]
+margin_top = 439.0
+margin_right = 463.0
+margin_bottom = 460.0
+custom_fonts/font = SubResource( 2 )
+text = "Unzip args, input -> inputfile, output -> outputfile"
+
+[node name="unzip_arg" type="LineEdit" parent="setting/V"]
+margin_top = 464.0
+margin_right = 463.0
+margin_bottom = 488.0
+text = "input -d output"
+expand_to_text_length = true
+
+[connection signal="button_up" from="V/H/back" to="." method="_on_back_button_up"]
+[connection signal="button_up" from="V/H/search" to="." method="_on_search_button_up"]
+[connection signal="button_up" from="V/H/setting" to="." method="_on_setting_button_up"]
+[connection signal="item_selected" from="V/scroll/ItemList" to="." method="_on_ItemList_item_selected"]
+[connection signal="timeout" from="V/scroll/ItemList/Timer" to="V/scroll/ItemList" method="_on_Timer_timeout"]
+[connection signal="request_completed" from="setting/http" to="setting" method="_on_http_request_completed"]
+[connection signal="button_up" from="setting/V/H/back" to="setting" method="_on_back_button_up"]
+[connection signal="button_up" from="setting/V/H/update_csv" to="setting" method="_on_update_csv_button_up"]
