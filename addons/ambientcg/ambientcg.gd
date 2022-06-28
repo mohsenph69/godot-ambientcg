@@ -60,7 +60,7 @@ func make_visible(visible):
 
 
 func get_plugin_name():
-	return "AbmientCG"
+	return "AmbientCG"
 
 
 func get_plugin_icon():
